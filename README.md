@@ -80,7 +80,7 @@ flask-redis-counter/
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR-REPOSITORY-URL>
+git clone git@github.com:Fetu-Deen/flask-redis-app.git
 cd flask-redis-counter
 ```
 
