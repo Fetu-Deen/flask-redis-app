@@ -1,0 +1,25 @@
+
+services:
+  web:
+    build: ./app
+    ports:
+      - "8008:8008"
+    depends_on:
+      cache:
+        condition: service_healthy
+    environment:
+      - REDIS_HOST=cache
+      - REDIS_PORT=6379
+
+  cache:
+    image: redis:alpine
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  redis-data:

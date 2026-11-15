@@ -1,0 +1,2 @@
+Flask #The Python web framework. It gives us tools to create routes like / and /count.
+Redis #The Python Redis client (redis-py). It lets our Python application communicate with the Redis server.
